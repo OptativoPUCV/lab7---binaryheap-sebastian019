@@ -42,7 +42,7 @@ void heap_push(Heap* pq, void* data, int priority){
     pq-> heapArray[i] = aux;
     i = (i-1)/2;
   }
-  pq -> size++;
+  //pq -> size++;
 }
 
 
