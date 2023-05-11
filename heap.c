@@ -47,7 +47,6 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-  pq -> size--;
   pq -> heapArray[0] = pq -> heapArray[pq->size];
   int i = 0;
   while(2*i+1 < pq -> size){
@@ -66,7 +65,7 @@ void heap_pop(Heap* pq){
     }
   }
   if(pq -> capac > 2* pq -> size + 1){
-    pq -> capac = 2* pq -> size + 1;
+    pq -> capac = 2* pq -> capac + 1;
     pq -> heapArray = realloc(pq -> heapArray, pq -> capac *sizeof(heapElem));
   }
 }
