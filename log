@@ -331,3 +331,17 @@ Thu 11 May 2023 07:56:48 PM UTC:
  tests:  7|1
 total_score: 45/70
 720104f
+Thu 11 May 2023 10:55:51 PM UTC: 
+ heap.c | 21 +++++++++++----------
+ 1 file changed, 11 insertions(+), 10 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:55:3: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘while’
+   55 |   while(2*i+1 < pq -> size){
+      |   ^~~~~
+heap.c:60:7: error: ‘aux’ undeclared (first use in this function)
+   60 |       aux = pq -> heapArray[(i-1)/2];
+      |       ^~~
+heap.c:60:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+9d11461
