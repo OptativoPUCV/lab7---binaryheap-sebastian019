@@ -60,6 +60,9 @@ void heap_pop(Heap* pq){
       pq-> heapArray[i2] = aux;
       i = i2;
     }
+    else{
+      break;
+    }
   }
 }
 
