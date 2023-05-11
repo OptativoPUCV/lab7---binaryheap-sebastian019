@@ -51,7 +51,7 @@ void heap_pop(Heap* pq){
   pq -> size--; 
   heapElem aux;
   if(pq -> size == 1){
-    pq -> capac--;
+    pq -> capac = 0;
     return;
   }
   
