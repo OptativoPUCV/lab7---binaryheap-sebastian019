@@ -54,3 +54,9 @@ heap.c:37:9: error: unused variable ‘array’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 02d2d02
+Thu 11 May 2023 12:01:29 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|4
+total_score: 0/70
+6713a78
