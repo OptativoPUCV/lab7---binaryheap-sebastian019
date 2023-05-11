@@ -48,8 +48,8 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
   pq -> heapArray[0] = pq -> heapArray[pq->size-1];
-  pq -> size--; 
   int i = 0;
+  
   while(2*i+1 < pq -> size){
     int hijo = 2*i+1;
     int hijo2 = 2*i+2, pos = hijo;
@@ -67,6 +67,7 @@ void heap_pop(Heap* pq){
       break;
     }
   }
+  pq -> size--; 
 }
 
 Heap* createHeap(){
