@@ -27,7 +27,16 @@ void* heap_top(Heap* pq){
 
 
 void heap_push(Heap* pq, void* data, int priority){
-
+  pq->priority[pq->size] = data;
+  int i = pq -> size;
+  
+  while (i > 0 && pq->priority[i] > pq->priority[(i-1)/2]) { 
+    int aux = pq -> priority[(i-1)/2];
+    pq->priority[(i-1)/2] = pq->priority[i];
+    pq-> priority[i] = aux;
+    i = (i-1)/2;
+  }
+  pq -> size++;
 }
 
 
@@ -36,9 +45,9 @@ void heap_pop(Heap* pq){
 }
 
 Heap* createHeap(){
-  Heap *mont = (Heap*)malloc(sizeof(Heap));
-  mont -> heapArray = (heapElem*)malloc(3 *sizeof(heapElem));
-  mont -> size = 0;
-  mont -> capac = 3;
-  return mont;
+  Heap *pqt = (Heap*)malloc(sizeof(Heap));
+  pqt -> heapArray = (heapElem*)malloc(3 *sizeof(heapElem));
+  pqt -> size = 0;
+  pqt -> capac = 3;
+  return pqt;
 }

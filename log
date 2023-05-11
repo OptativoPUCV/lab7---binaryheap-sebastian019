@@ -125,3 +125,31 @@ Thu 11 May 2023 12:07:01 AM UTC:
  tests:  2|2
 total_score: 20/70
 33f4fcd
+Thu 11 May 2023 06:59:28 PM UTC: 
+ heap.c | 21 +++++++++++++++------
+ 1 file changed, 15 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:5: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   30 |   pq->priority[pq->size] = data;
+      |     ^~
+heap.c:33:21: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   33 |   while (i > 0 && pq->priority[i] > pq->priority[(i-1)/2]) {
+      |                     ^~
+heap.c:33:39: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   33 |   while (i > 0 && pq->priority[i] > pq->priority[(i-1)/2]) {
+      |                                       ^~
+heap.c:34:18: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   34 |     int aux = pq -> priority[(i-1)/2];
+      |                  ^~
+heap.c:35:7: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   35 |     pq->priority[(i-1)/2] = pq->priority[i];
+      |       ^~
+heap.c:35:31: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   35 |     pq->priority[(i-1)/2] = pq->priority[i];
+      |                               ^~
+heap.c:36:7: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   36 |     pq-> priority[i] = aux;
+      |       ^~
+Compilation failed
+cbf608c
