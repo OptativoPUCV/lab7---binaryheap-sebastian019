@@ -57,8 +57,8 @@ void heap_pop(Heap* pq){
   }
   
   for(int i = 0 ; i < pq -> capac ; i++){
-    int hijo = 2*i+1;
-    int hijo2 = 2*i+2;
+    int hijo = 2i+1;
+    int hijo2 = 2i+2;
     if(pq->heapArray[hijo].priority > pq->heapArray[hijo2].priority){
       aux = pq -> heapArray[(i-1)/2];
       pq->heapArray[(i-1)/2] = pq->heapArray[hijo];
