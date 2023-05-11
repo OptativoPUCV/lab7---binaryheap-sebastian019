@@ -40,3 +40,17 @@ heap.c:36:9: error: unused variable ‘mont’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 bd01859
+Thu 11 May 2023 12:00:44 AM UTC: 
+ heap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:37:17: error: initialization of ‘Heap *’ {aka ‘struct Heap *’} from incompatible pointer type ‘heapElem *’ {aka ‘struct nodo *’} [-Werror=incompatible-pointer-types]
+   37 |   Heap *array = (heapElem*)malloc(sizeof(heapElem));
+      |                 ^
+heap.c:37:9: error: unused variable ‘array’ [-Werror=unused-variable]
+   37 |   Heap *array = (heapElem*)malloc(sizeof(heapElem));
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+02d2d02
