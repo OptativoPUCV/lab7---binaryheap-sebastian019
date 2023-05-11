@@ -64,6 +64,10 @@ void heap_pop(Heap* pq){
       break;
     }
   }
+  if(pq -> capac > 2* pq -> size + 1){
+    pq -> capac = 2* pq -> size + 1;
+    pq -> heapArray = realloc(pq -> heapArray, pq -> capac *sizeof(heapElem));
+  }
 }
 
 Heap* createHeap(){
