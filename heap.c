@@ -27,6 +27,10 @@ void* heap_top(Heap* pq){
 
 
 void heap_push(Heap* pq, void* data, int priority){
+  if(pq -> capac == pq -> size){
+    pq -> capac = pq -> capac *2 + 1;
+  }
+  
   pq->heapArray[pq->size].data = data;
   pq->heapArray[pq->size].priority = priority;
   int i = pq -> size;
