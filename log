@@ -153,3 +153,9 @@ heap.c:36:7: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘pr
       |       ^~
 Compilation failed
 cbf608c
+Thu 11 May 2023 07:02:41 PM UTC: 
+ heap.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+ tests:  2|2
+total_score: 20/70
+4527cea
