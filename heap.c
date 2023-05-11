@@ -64,6 +64,7 @@ void heap_pop(Heap* pq){
       break;
     }
   }
+  pq -> size--;
 }
 
 Heap* createHeap(){
